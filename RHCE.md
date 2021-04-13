@@ -455,19 +455,13 @@ $ ansible-galaxy list
 根据下列要求，创建一个名为`/home/student/ansible/roles.yml`的`playbook`：
 
 1. `playbook`中包含一个`play`，该`play`在`balancers`主机组中的主机上运行并将使用`balancer`角色。
-   2. 此角色配置一项服务，以在`webservers`主机组中的主机之间平衡`Web`服务器请求的负载。
-
-   3. 浏览到`balancers`主机组中的主机（例如 `http://node3.example.com/`）将生成以下输出：`Welcom to node3.example.com on 172.24.22.11`
-
-   4. 重新加载浏览器将从另一 Web 服务器生成输出：`Welcom to node4.example.com on 172.24.22.12`
-
+   1. 此角色配置一项服务，以在`webservers`主机组中的主机之间平衡`Web`服务器请求的负载。
+   2. 浏览到`balancers`主机组中的主机（例如 `http://node3.example.com/`）将生成以下输出：`Welcom to node3.example.com on 172.24.22.11`
+   3. 重新加载浏览器将从另一 Web 服务器生成输出：`Welcom to node4.example.com on 172.24.22.12`
 2. `playbook`中包含一个`play`， 该`play`在`webservers`主机组中的主机上运行并将使用`phpinfo`角色。
-   6. 请通过`URL /hello.php`浏览到`webservers`主机组中的主机将生成以下输出：`Hello PHP World from FQDN`
-   7. 其中，`FQDN`是主机的完全限定名称。
-
-
+   1. 请通过`URL /hello.php`浏览到`webservers`主机组中的主机将生成以下输出：`Hello PHP World from FQDN`
+   2. 其中，`FQDN`是主机的完全限定名称。
 - 例如，浏览到`http://node3.example.com/hello.php`会生成以下输出：`Hello PHP World from node3.example.com`另外还有`PHP`配置的各种详细信息，如安装的`PHP`版本等。
-
 - 同样，浏览到`http://node4.example.com/hello.php`会生成以下输出：`Hello PHP World from node4.example.com`另外还有`PHP`配置的各种详细信息，如安装的`PHP`版本等
 
 <details>
