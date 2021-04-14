@@ -549,10 +549,6 @@ $ vim lv.yml
         vg: research
         lv: data
         size: 1500
-    - name: create ext4
-      filesystem:
-        fstype: ext4
-        dev: /dev/research/data
     rescue:
     - debug:
         msg: Could not create logical volume of that size
@@ -561,11 +557,15 @@ $ vim lv.yml
         vg: research
         lv: data
         size: 800
-      when: ansible_lvm.vgs.research is defined
-      ignore_errors: yes
-    - debug:
-        msg: Volume group done not exist
-      when: ansible_lvm.vgs.research is undefined
+    always:
+    - name: create ext4
+      filesystem:
+        fstype: ext4
+        dev: /dev/research/data
+    when: ansible_lvm.vgs.research is defined
+  - debug:
+      msg: Volume group done not exist
+    when: ansible_lvm.vgs.research is undefined
 </code>
 </pre>
 </details>
