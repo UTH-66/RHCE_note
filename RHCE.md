@@ -696,17 +696,17 @@ $ vim issue.yml
     copy:
       content: 'Development'
       dest: /etc/issue
-    when: 'inventory_hostname in groups.dev'
+    when: "'dev' in group_names"
   - name: change test
     copy:
       content: 'Test'
       dest: /etc/issue
-    when: 'inventory_hostname in groups.test'
+    when: "'test' in group_names"
   - name: change prod
     copy:
       content: 'Production'
       dest: /etc/issue
-    when: 'inventory_hostname in groups.prod'
+    when: "'prod' in group_names"
 </code>
 </pre>
 </details>
