@@ -399,10 +399,10 @@ $ ansible-galaxy list
 
 根据下列要求，在`/home/greg/ansible/roles`中创建名为`apache`的角色：
 
-1.`httpd`软件包已安装，设为在系统启动时启用并启动
-2.防火墙已启用并正在运行，并使用允许访问`Web`服务器的规则 
-3.模板文件 `index.html.j2` 已存在，用于创建具有以下输出的文件`/var/www/html/index.html`： `Welcome to HOSTNAME on IPADDRESS`其中，`HOSTNAME`是受管节点的完全限定域名，`IPADDRESS`则是受管节点的`IP`地址。 
-4.创建`playbook` `/home/greg/ansible/apache.yml`,使用`apache`的角色,在 `webservers`主机组。
+1. `httpd`软件包已安装，设为在系统启动时启用并启动。
+2. 防火墙已启用并正在运行，并使用允许访问`Web`服务器的规则。
+3. 模板文件 `index.html.j2` 已存在，用于创建具有以下输出的文件`/var/www/html/index.html`： `Welcome to HOSTNAME on IPADDRESS`其中，`HOSTNAME`是受管节点的完全限定域名，`IPADDRESS`则是受管节点的`IP`地址。
+4. 创建`playbook` `/home/greg/ansible/apache.yml`,使用`apache`的角色,在 `webservers`主机组。
 
 ### Deploy
 
